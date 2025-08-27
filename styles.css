@@ -1,0 +1,24 @@
+.icon-copy, .icon-call, .icon-heart {
+    display: inline-block;
+    vertical-align: middle;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    stroke: currentColor;
+  }
+  .icon-copy {
+    width: 18px;
+    height: 18px;
+  }
+  .icon-call {
+    width: 18px;
+    height: 18px;
+  }
+  .icon-heart {
+    width: 20px;
+    height: 20px;
+    fill: #ec4899;
+    stroke: #ec4899;
+    margin-right: 0.3rem;
+  }
