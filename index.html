@@ -67,8 +67,11 @@
 
   
 
+<!--card section-->
 
- <div class="flex-auto">
+ <div>    <!--card parent-->
+
+  
     <section class="max-w-7xl w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
     
       <article class="bg-white rounded-xl shadow-md p-6 relative flex flex-col justify-between">
@@ -278,24 +281,75 @@
     
    
 
-    <div class="bg-white rounded-lg shadow-md p-4">
-        <div class="flex justify-between items-center mb-4">
-            <h2 class="text-xl font-semibold text-gray-800 flex items-center space-x-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span>Call History</span>
-            </h2>
-            <button class="bg-green-500 text-white py-1 px-3 rounded-lg text-sm hover:bg-green-600 transition">Clear</button>
-        </div>
     
-        
+
+ 
+
+    <!--History section-->
+
+
+    <div>
+      <section class="history-section" aria-label="Call history section with clear button">
+        <header class="history-header">
+          <h2 class="history-title">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" >
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            Call History
+          </h2>
+          <button class="clear-btn" aria-label="Clear call history">Clear</button>
+        </header>
+        <div class="history-list" role="list">
+          <article class="history-item" role="listitem">
+            <div class="item-info">
+              <div class="item-title">Fire Service Number</div>
+              <div class="item-number">999</div>
+            </div>
+            <time class="item-time" datetime="2023-01-01T11:36:58">11:36:58 AM</time>
+          </article>
+          <article class="history-item" role="listitem">
+            <div class="item-info">
+              <div class="item-title">National Emergency Number</div>
+              <div class="item-number">1994-999999</div>
+            </div>
+            <time class="item-time" datetime="2023-01-01T11:36:58">11:36:58 AM</time>
+          </article>
+          <article class="history-item" role="listitem">
+            <div class="item-info">
+              <div class="item-title">Fire Service Number</div>
+              <div class="item-number">999</div>
+            </div>
+            <time class="item-time" datetime="2023-01-01T11:36:58">11:36:58 AM</time>
+          </article>
+          <article class="history-item" role="listitem">
+            <div class="item-info">
+              <div class="item-title">Bangladesh Railway Helpline</div>
+              <div class="item-number">999</div>
+            </div>
+            <time class="item-time" datetime="2023-01-01T11:36:58">11:36:58 AM</time>
+          </article>
+          <article class="history-item" role="listitem">
+            <div class="item-info">
+              <div class="item-title">Fire Service Number</div>
+              <div class="item-number">999</div>
+            </div>
+            <time class="item-time" datetime="2023-01-01T11:36:58">11:36:58 AM</time>
+          </article>
+          <article class="history-item" role="listitem">
+            <div class="item-info">
+              <div class="item-title">Anti-Corruption Helpline</div>
+              <div class="item-number">999</div>
+            </div>
+            <time class="item-time" datetime="2023-01-01T11:36:58">11:36:58 AM</time>
+          </article>
+        </div>
+      </section>
     </div>
-   
-    </div>
+    
+    
 
-
-
+  </div>
 
     <script src="script.js"></script>
 </body>
