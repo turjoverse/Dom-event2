@@ -151,7 +151,44 @@
 
 
 
-
+    @media (max-width: 600px) {
+      nav.flex {
+        flex-direction: column;       /* Stack left and right sections vertically */
+        align-items: center;          /* Center horizontally */
+        padding: 1rem;                /* Optional: increase padding for touch */
+      }
+    
+      nav.flex > div.flex.items-center:first-child {
+        margin-bottom: 1rem;          /* Space below the left section */
+        justify-content: center;      /* Center logo + title horizontally */
+        text-align: center;           /* Center text inside */
+      }
+    
+      nav.flex > div.flex.items-center.space-x-4 {
+        justify-content: center;      /* Center the right section horizontally */
+        gap: 1rem;                   /* Use gap instead of space-x-4 for better control */
+        flex-wrap: wrap;             /* Allow wrapping if needed */
+      }
+    
+      /* Adjust icon sizes on small screens */
+      nav.flex img.h-10 {
+        height: 40px; /* smaller logo */
+      }
+    
+      nav.flex img.h-6 {
+        height: 20px; /* smaller icons */
+      }
+    
+      /* Adjust font sizes */
+      nav.flex span.text-2xl {
+        font-size: 1.25rem; /* smaller title */
+      }
+    
+      nav.flex span.text-lg {
+        font-size: 1rem; /* smaller counts */
+      }
+    }
+    
 
 
 
