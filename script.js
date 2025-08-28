@@ -17,19 +17,6 @@ function updateCounts() {
     document.querySelector('.heart-count').innerText = heartCount;
     document.querySelector('.coin-count').innerText = `${coinCount}`;
 }
-
-// Call Button Functionality
-function makeCall(serviceName, serviceNumber) {
-    if (coinCount < 20) {
-        alert("Not enough coins to make this call!");
-        return;
-    }
-    alert(`Calling ${serviceName} at ${serviceNumber}`);
-    coinCount -= 20; 
-    updateCounts();
-    addToCallHistory(serviceName, serviceNumber);
-}
-
 // Adding to Call History
 function addToCallHistory(serviceName, serviceNumber) {
     const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
@@ -83,3 +70,31 @@ document.querySelectorAll('.flex-grow a[href^="tel:"]').forEach(button => {
         makeCall(serviceName, serviceNumber);
     });
 });
+
+
+function handleCallButtonClick(serviceName, serviceNumber) {
+    const coinCountElem = document.querySelector('.coin-count');
+    if (!coinCountElem) {
+      alert('Coin count element not found!');
+      return;
+    }
+  
+    let coins = parseInt(coinCountElem.textContent, 10);
+    if (isNaN(coins)) {
+      alert('Invalid coin count!');
+      return;
+    }
+  
+    if (coins < 20) {
+      alert('Insufficient coins to make a call. You need at least 20 coins.');
+      return;
+    }
+  
+    // Deduct 20 coins
+    coins -= 20;
+    coinCountElem.textContent = coins;
+  
+    // Show alert with service name and number
+    alert(`Calling ${serviceName} at number ${serviceNumber}.\n20 coins have been deducted.`);
+  }
+  

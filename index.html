@@ -96,10 +96,14 @@
             <svg class="icon-copy" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-3-3v6M8 7H6a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-2"/></svg>
             Copy
           </button>
-          <a href="tel:999" aria-label="Call National Emergency Number" class="flex items-center justify-center gap-2 flex-grow rounded-md bg-green-600 text-white py-2 px-4 hover:bg-green-700 transition">
-            <svg class="icon-call" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92V21a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.11 19.52 19.52 0 01-6-6 19.79 19.79 0 01-3.11-8.62A2 2 0 013 2h4.09a2 2 0 012 1.72c.13 1.21.46 2.39.98 3.5a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c1.11.52 2.29.85 3.5.98a2 2 0 011.71 2z"/></svg>
-            Call
-          </a>
+          <a href="tel:999" 
+          aria-label="Call National Emergency Number" 
+          class="flex items-center justify-center gap-2 flex-grow rounded-md bg-green-600 text-white py-2 px-4 hover:bg-green-700 transition"
+          onclick="handleCallButtonClick('National Emergency Number', '999')">
+        <svg class="icon-call" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92V21a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.11 19.52 19.52 0 01-6-6 19.79 19.79 0 01-3.11-8.62A2 2 0 013 2h4.09a2 2 0 012 1.72c.13 1.21.46 2.39.98 3.5a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c1.11.52 2.29.85 3.5.98a2 2 0 011.71 2z"/></svg>
+         Call
+       </a>
+       
         </div>
       </article>
     
@@ -126,15 +130,18 @@
           </svg>
         </div>
         <div class="flex gap-3">
-          <button aria-label="Copy Medical Emergency Number" type="button" class="call-button flex items-center justify-center gap-2 flex-grow rounded-md border border-gray-300 py-2 px-4 text-gray-800 hover:bg-gray-100 transition" onclick="copyToClipboard('911')">
+          <button aria-label="Copy Medical Emergency Number" type="button" class="call-button flex items-center justify-center gap-2 flex-grow rounded-md border border-gray-300 py-2 px-4 text-gray-800 hover:bg-gray-100 transition" onclick="copyToClipboard('1994-999999')">
             <svg class="icon-copy" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-3-3v6M8 7H6a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-2"/></svg>
             Copy
           </button>
-          <a href="tel:911" aria-label="Call Medical Emergency Number" class="flex items-center justify-center gap-2 flex-grow rounded-md bg-green-600 text-white py-2 px-4 hover:bg-green-700 transition">
-            <svg class="icon-call" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92V21a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.11 19.52 19.52 0 01-6-6 19.79 19.79 0 01-3.11-8.62A2 2 0 013 2h4.09a2 2 0 012 1.72c.13 1.21.46 2.39.98 3.5a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c1.11.52 2.29.85 3.5.98a2 2 0 011.71 2z"/></svg>
-            Call
-          </a>
-        </div>
+          <a href="tel:1994-999999" 
+          aria-label="Call Medical Emergency Number" 
+          class="flex items-center justify-center gap-2 flex-grow rounded-md bg-green-600 text-white py-2 px-4 hover:bg-green-700 transition"
+          onclick="handleCallButtonClick('Ambulance Service', '999')">
+        <svg class="icon-call" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92V21a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.11 19.52 19.52 0 01-6-6 19.79 19.79 0 01-3.11-8.62A2 2 0 013 2h4.09a2 2 0 012 1.72c.13 1.21.46 2.39.98 3.5a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c1.11.52 2.29.85 3.5.98a2 2 0 011.71 2z"/></svg>
+         Call
+       </a>
+       
       </article>
     
       <article class="bg-white rounded-xl shadow-md p-6 relative flex flex-col justify-between">
@@ -160,14 +167,18 @@
           </svg>
         </div>
         <div class="flex gap-3">
-          <button aria-label="Copy Fire Department Number" type="button" class="call-button flex items-center justify-center gap-2 flex-grow rounded-md border border-gray-300 py-2 px-4 text-gray-800 hover:bg-gray-100 transition" onclick="copyToClipboard('100')">
+          <button aria-label="Copy Fire Department Number" type="button" class="call-button flex items-center justify-center gap-2 flex-grow rounded-md border border-gray-300 py-2 px-4 text-gray-800 hover:bg-gray-100 transition" onclick="copyToClipboard('999')">
             <svg class="icon-copy" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-3-3v6M8 7H6a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-2"/></svg>
             Copy
           </button>
-          <a href="tel:100" aria-label="Call Fire Department Number" class="flex items-center justify-center gap-2 flex-grow rounded-md bg-green-600 text-white py-2 px-4 hover:bg-green-700 transition">
-            <svg class="icon-call" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92V21a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.11 19.52 19.52 0 01-6-6 19.79 19.79 0 01-3.11-8.62A2 2 0 013 2h4.09a2 2 0 012 1.72c.13 1.21.46 2.39.98 3.5a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c1.11.52 2.29.85 3.5.98a2 2 0 011.71 2z"/></svg>
-            Call
-          </a>
+          <a href="tel:999" 
+          aria-label="Call Fire Service Number" 
+          class="flex items-center justify-center gap-2 flex-grow rounded-md bg-green-600 text-white py-2 px-4 hover:bg-green-700 transition"
+          onclick="handleCallButtonClick('Fire Service Number', '999')">
+        <svg class="icon-call" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92V21a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.11 19.52 19.52 0 01-6-6 19.79 19.79 0 01-3.11-8.62A2 2 0 013 2h4.09a2 2 0 012 1.72c.13 1.21.46 2.39.98 3.5a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c1.11.52 2.29.85 3.5.98a2 2 0 011.71 2z"/></svg>
+         Call
+       </a>
+       
         </div>
       </article>
     
@@ -194,14 +205,18 @@
           </svg>
         </div>
         <div class="flex gap-3">
-          <button aria-label="Copy Disaster Control Number" type="button" class=" call-button flex items-center justify-center gap-2 flex-grow rounded-md border border-gray-300 py-2 px-4 text-gray-800 hover:bg-gray-100 transition" onclick="copyToClipboard('112')">
+          <button aria-label="Copy Disaster Control Number" type="button" class=" call-button flex items-center justify-center gap-2 flex-grow rounded-md border border-gray-300 py-2 px-4 text-gray-800 hover:bg-gray-100 transition" onclick="copyToClipboard('999')">
             <svg class="icon-copy" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-3-3v6M8 7H6a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-2"/></svg>
             Copy
           </button>
-          <a href="tel:112" aria-label="Call Disaster Control Number" class="flex items-center justify-center gap-2 flex-grow rounded-md bg-green-600 text-white py-2 px-4 hover:bg-green-700 transition">
-            <svg class="icon-call" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92V21a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.11 19.52 19.52 0 01-6-6 19.79 19.79 0 01-3.11-8.62A2 2 0 013 2h4.09a2 2 0 012 1.72c.13 1.21.46 2.39.98 3.5a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c1.11.52 2.29.85 3.5.98a2 2 0 011.71 2z"/></svg>
-            Call
-          </a>
+          <a href="tel:999" 
+          aria-label="Call Police Helpline Number" 
+          class="flex items-center justify-center gap-2 flex-grow rounded-md bg-green-600 text-white py-2 px-4 hover:bg-green-700 transition"
+          onclick="handleCallButtonClick('Police Helpline Number', '999')">
+        <svg class="icon-call" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92V21a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.11 19.52 19.52 0 01-6-6 19.79 19.79 0 01-3.11-8.62A2 2 0 013 2h4.09a2 2 0 012 1.72c.13 1.21.46 2.39.98 3.5a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c1.11.52 2.29.85 3.5.98a2 2 0 011.71 2z"/></svg>
+         Call
+       </a>
+       
         </div>
       </article>
     
@@ -232,10 +247,14 @@
             <svg class="icon-copy" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-3-3v6M8 7H6a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-2"/></svg>
             Copy
           </button>
-          <a href="tel:101" aria-label="Call Police Emergency Number" class="flex items-center justify-center gap-2 flex-grow rounded-md bg-green-600 text-white py-2 px-4 hover:bg-green-700 transition">
-            <svg class="icon-call" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92V21a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.11 19.52 19.52 0 01-6-6 19.79 19.79 0 01-3.11-8.62A2 2 0 013 2h4.09a2 2 0 012 1.72c.13 1.21.46 2.39.98 3.5a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c1.11.52 2.29.85 3.5.98a2 2 0 011.71 2z"/></svg>
-            Call
-          </a>
+          <a href="tel:101" 
+          aria-label="Call Electricity Helpline" 
+          class="flex items-center justify-center gap-2 flex-grow rounded-md bg-green-600 text-white py-2 px-4 hover:bg-green-700 transition"
+          onclick="handleCallButtonClick('Electricity Helpline', '101')">
+        <svg class="icon-call" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92V21a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.11 19.52 19.52 0 01-6-6 19.79 19.79 0 01-3.11-8.62A2 2 0 013 2h4.09a2 2 0 012 1.72c.13 1.21.46 2.39.98 3.5a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c1.11.52 2.29.85 3.5.98a2 2 0 011.71 2z"/></svg>
+         Call
+       </a>
+       
         </div>
       </article>
     
@@ -262,14 +281,17 @@
           </svg>
         </div>
         <div class="flex gap-3">
-          <button aria-label="Copy Customer Service Number" type="button" class="flex items-center justify-center gap-2 flex-grow rounded-md border border-gray-300 py-2 px-4 text-gray-800 hover:bg-gray-100 transition" onclick="copyToClipboard('12345')">
+          <button aria-label="Copy Customer Service Number" type="button" class="flex items-center justify-center gap-2 flex-grow rounded-md border border-gray-300 py-2 px-4 text-gray-800 hover:bg-gray-100 transition" onclick="copyToClipboard('163')">
             <svg class="icon-copy" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-3-3v6M8 7H6a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-2"/></svg>
             Copy
           </button>
-          <a href="tel:12345" aria-label="Call Customer Service Number" class=" call-button flex items-center justify-center gap-2 flex-grow rounded-md bg-green-600 text-white py-2 px-4 hover:bg-green-700 transition">
-            <svg class="icon-call" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92V21a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.11 19.52 19.52 0 01-6-6 19.79 19.79 0 01-3.11-8.62A2 2 0 013 2h4.09a2 2 0 012 1.72c.13 1.21.46 2.39.98 3.5a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c1.11.52 2.29.85 3.5.98a2 2 0 011.71 2z"/></svg>
-            Call
-          </a>
+          <a href="tel:163" 
+          aria-label="Call Bangladesh Railway Helpline" 
+          class="flex items-center justify-center gap-2 flex-grow rounded-md bg-green-600 text-white py-2 px-4 hover:bg-green-700 transition"
+          onclick="handleCallButtonClick('Bangladesh Railway Helpline', '163')">
+        <svg class="icon-call" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92V21a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.11 19.52 19.52 0 01-6-6 19.79 19.79 0 01-3.11-8.62A2 2 0 013 2h4.09a2 2 0 012 1.72c.13 1.21.46 2.39.98 3.5a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c1.11.52 2.29.85 3.5.98a2 2 0 011.71 2z"/></svg>
+         Call
+       </a>
         </div>
       </article>
     </section>
