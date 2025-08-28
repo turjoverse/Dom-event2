@@ -1,5 +1,5 @@
 let heartCount = 100; 
-let coinCount =[]; 
+let coinCount =[100]; 
 let callHistory = [];
 
 document.addEventListener("DOMContentLoaded", () => {
