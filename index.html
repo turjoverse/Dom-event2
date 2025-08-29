@@ -15,59 +15,59 @@
             font-family: Arial, sans-serif;
         }
         .banner {
-            background-color: #2b7a2a; /* Dark green */
+            background-color: #2b7a2a; 
             color: white;
             text-align: center;
             padding: 20px;
         }
         .banner h1 {
-            margin: 10px 0; /* Added margin for spacing */
+            margin: 10px 0; 
             font-size: 36px;
         }
         .banner p {
-            margin: 5px 0 0; /* Spacing below the paragraph */
+            margin: 5px 0 0; 
             font-size: 16px;
         }
         .logo {
-            width: 50px; /* Adjust logo size */
-            display: block; /* Ensures it's block level for centering */
-            margin: 0 auto; /* Center aligns the logo */
+            width: 50px; 
+            display: block; 
+            margin: 0 auto; 
         }
         .banner-content {
-            display: flex; /* Use flexbox for alignment */
-            flex-direction: column; /* Stack items vertically */
-            align-items: center; /* Center-aligns the items */
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
         }
     </style>
 </head>
-<body>
+<body class="bg-[#f5fff6] min-h-screen">
     <nav class="flex justify-between items-center p-4 bg-gray-100 border-b border-gray-300">
         <div class="flex items-center">
-            <img src="./images/logo.png" alt="Website Logo" class="h-10 mr-2"> <!-- Adjust height as needed -->
+            <img src="./images/logo.png" alt="Website Logo" class="h-10 mr-2"> 
             <span class="text-2xl font-bold">Emergency <br>Service</span>
         </div>
-        <div class="flex items-center space-x-4"> <!-- Space between right section items -->
-          <div class="flex items-center">
-            <img src="./images/heart.png" alt="Heart Icon" class="h-6"> <!-- Adjust height as needed -->
-            <span class="text-lg ml-1 heart-count">100</span> <!-- Heart count -->
+        <div class="flex items-center space-x-4"> 
+          <div class="flex items-center bg-[#d5f3dc] px-5 py-2 rounded-3xl">
+            <img src="./images/heart.png" alt="Heart Icon" class="h-6"> 
+            <span class="text-lg ml-1 heart-count">100</span> 
         </div>
-        <div class="flex items-center">
-            <img src="./images/coin.png" alt="Coin Icon" class="h-6"> <!-- Adjust height as needed -->
-            <span class="text-lg ml-1 coin-count">100</span> <!-- Coin count -->
+        <div class="flex items-center bg-[#d5f3dc] px-5 py-2 rounded-3xl button-service"">
+            <img src="./images/coin.png" alt="Coin Icon" class="h-6"> 
+            <span class="text-lg ml-1 coin-count">100</span> 
         </div>
             <div class="flex items-center">
-                <span class="bg-green-500 text-white px-3 py-1 rounded-full">Copy Count</span> <!-- Copy count text with styling -->
+                <span class="bg-green-500 text-white px-3 py-1 rounded-full">Copy Count</span> 
             </div>
     </nav>
     <div class="text-white text-center flex flex-col items-center bg-[linear-gradient(to_right,#006747_50%,#013223_100%)] py-15">
         <img src="./images/logo.png" alt="Bangladesh Logo" class="logo">
-        <h1>Emergency Service Directory</h1>
+        <h1 class="font-bold text-3xl">Emergency Service Directory</h1>
         <p>Government Emergency Services at Your Fingertip - A Project by Government of the People's Republic of Bangladesh</p>
     </div>
 <!--card section-->
 
- <div class=" flex flex-col sm:flex-row gap-3flex justify-between items-center p-4 bg-gray-100 border-b border-gray-300">    <!--card parent-->
-     <section class="max-w-7xl w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+ <div class=" flex flex-col sm:flex-row gap-3flex justify-between items-center p-8 bg-gray-100 border-b border-gray-300 flex mt-5">    <!--card parent-->
+     <section class=" flex gap-5 flex-wrap h-ful max-w-7xl w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       
       <article class="bg-white rounded-xl shadow-md p-6 relative flex flex-col justify-between">
         <button aria-label="Add to favorites" title="Add to favorites" class=" call-button  absolute top-3 right-3 text-gray-500 hover:text-pink-600 transition" type="button" >
@@ -103,10 +103,8 @@
         <svg class="icon-call" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92V21a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.11 19.52 19.52 0 01-6-6 19.79 19.79 0 01-3.11-8.62A2 2 0 013 2h4.09a2 2 0 012 1.72c.13 1.21.46 2.39.98 3.5a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c1.11.52 2.29.85 3.5.98a2 2 0 011.71 2z"/></svg>
          Call
        </a>
-       
         </div>
       </article>
-    
       <article class="bg-white rounded-xl shadow-md p-6 relative flex flex-col justify-between">
         <button aria-label="Add to favorites" title="Add to favorites" class=" call-button absolute top-3 right-3 text-gray-500 hover:text-pink-600 transition" type="button" >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
@@ -181,7 +179,6 @@
        
         </div>
       </article>
-    
       <article class="bg-white rounded-xl shadow-md p-6 relative flex flex-col justify-between">
         <button aria-label="Add to favorites" title="Add to favorites" class=" call-button absolute top-3 right-3 text-gray-500 hover:text-pink-600 transition" type="button" >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
@@ -297,8 +294,8 @@
     </section>
     
     <!--History section--> 
-    <div>
-      <section class="history-section" aria-label="Call history section with clear button">
+    <div class="history-container bg-white rounded-xl w-[100%] lg:w-1/3 shadow-xl px-3 p-3">
+      <section class="history-section " aria-label="Call history section with clear button">
         <header class="history-header">
           <h2 class="history-title">
             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" >

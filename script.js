@@ -48,7 +48,7 @@ function clearHistory() {
     renderCallHistory();
 }
 
-// Handle Copy Button Function (Example)
+// Handle Copy Button Function 
 function copyToClipboard(number) {
     navigator.clipboard.writeText(number).then(() => {
         alert(`Copied ${number} to clipboard`);
