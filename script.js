@@ -1,11 +1,27 @@
 let heartCount = 100; 
-let coinCount =[100]; 
+let coinCount = 100;  // Changed from array to number for clarity
 let callHistory = [];
 
 document.addEventListener("DOMContentLoaded", () => {
     updateCounts();
    
     document.querySelector('.clear-btn').addEventListener('click', clearHistory);
+
+    // Attach event listeners to heart icons
+    document.querySelectorAll('.icon-heart').forEach(icon => {
+        icon.addEventListener('click', increaseHeartCount);
+    });
+
+    // Attach event listeners to call buttons
+    document.querySelectorAll('.flex-grow a[href^="tel:"]').forEach(button => {
+        const serviceName = button.previousElementSibling.previousElementSibling.innerText;
+        const serviceNumber = button.getAttribute('href').replace('tel:', '');
+        
+        button.addEventListener('click', (e) => {
+            e.preventDefault(); 
+            handleCallButtonClick(serviceName, serviceNumber);
+        });
+    });
 });
 
 function increaseHeartCount() {
@@ -15,8 +31,9 @@ function increaseHeartCount() {
 
 function updateCounts() {
     document.querySelector('.heart-count').innerText = heartCount;
-    document.querySelector('.coin-count').innerText = `${coinCount}`;
+    document.querySelector('.coin-count').innerText = coinCount;
 }
+
 // Adding to Call History
 function addToCallHistory(serviceName, serviceNumber) {
     const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
@@ -55,46 +72,20 @@ function copyToClipboard(number) {
     });
 }
 
-// Attach event listeners to heart icons and call buttons
-document.querySelectorAll('.icon-heart').forEach(icon => {
-    icon.addEventListener('click', increaseHeartCount);
-});
-
-
-document.querySelectorAll('.flex-grow a[href^="tel:"]').forEach(button => {
-    const serviceName = button.previousElementSibling.previousElementSibling.innerText;
-    const serviceNumber = button.getAttribute('href').replace('tel:', '');
-    
-    button.addEventListener('click', (e) => {
-        e.preventDefault(); 
-        makeCall(serviceName, serviceNumber);
-    });
-});
-
-
+// Reusable function to handle call button clicks and coin deduction
 function handleCallButtonClick(serviceName, serviceNumber) {
-    const coinCountElem = document.querySelector('.coin-count');
-    if (!coinCountElem) {
-      alert('Coin count element not found!');
-      return;
+    if (coinCount < 20) {
+        alert('Insufficient coins to make a call. You need at least 20 coins.');
+        return;
     }
-  
-    let coins = parseInt(coinCountElem.textContent, 10);
-    if (isNaN(coins)) {
-      alert('Invalid coin count!');
-      return;
-    }
-  
-    if (coins < 20) {
-      alert('Insufficient coins to make a call. You need at least 20 coins.');
-      return;
-    }
-  
+
     // Deduct 20 coins
-    coins -= 20;
-    coinCountElem.textContent = coins;
-  
+    coinCount -= 20;
+    updateCounts();
+
+    // Add to call history
+    addToCallHistory(serviceName, serviceNumber);
+
     // Show alert with service name and number
     alert(`Calling ${serviceName} at number ${serviceNumber}.\n20 coins have been deducted.`);
-  }
-  
+}
